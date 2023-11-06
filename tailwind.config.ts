@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  prefix: 'tw-',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,6 +32,18 @@ const config: Config = {
         'color-success-500': 'var(--color-success-500)',
         'color-error-100': 'var(--color-error-100)',
         'color-error-500': 'var(--color-error-500)',
+      },
+      spacing: {
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '16': '4rem',
+        '20': '5rem',
+        '40': '10rem',
       },
     },
   },
