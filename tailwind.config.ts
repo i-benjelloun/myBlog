@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  prefix: 'tw-',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,10 +9,41 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'grey-50': 'var(--color-grey-50)',
+        'grey-100': 'var(--color-grey-100)',
+        'grey-200': 'var(--color-grey-200)',
+        'grey-300': 'var(--color-grey-300)',
+        'grey-400': 'var(--color-grey-400)',
+        'grey-500': 'var(--color-grey-500)',
+        'grey-600': 'var(--color-grey-600)',
+        'grey-700': 'var(--color-grey-700)',
+        'grey-800': 'var(--color-grey-800)',
+        'grey-900': 'var(--color-grey-900)',
+        'primary-50': 'var(--color-primary-50)',
+        'primary-100': 'var(--color-primary-100)',
+        'primary-200': 'var(--color-primary-200)',
+        'primary-300': 'var(--color-primary-300)',
+        'primary-400': 'var(--color-primary-400)',
+        'primary-500': 'var(--color-primary-500)',
+        'primary-600': 'var(--color-primary-600)',
+        'primary-700': 'var(--color-primary-700)',
+        'color-success-100': 'var(--color-success-100)',
+        'color-success-500': 'var(--color-success-500)',
+        'color-error-100': 'var(--color-error-100)',
+        'color-error-500': 'var(--color-error-500)',
+      },
+      spacing: {
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '16': '4rem',
+        '20': '5rem',
+        '40': '10rem',
       },
     },
   },
