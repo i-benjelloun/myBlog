@@ -15,9 +15,9 @@ function PostItem({ post }: PostItemProps) {
   const linkPath = `/posts/${slug}`;
 
   return (
-    <li className="tw-bg-grey-800 tw-text-center tw-text-grey-100 tw-shadow">
+    <li className="tw-overflow-hidden tw-rounded-xl tw-bg-grey-800 tw-text-center tw-text-grey-100 tw-shadow">
       <Link href={linkPath}>
-        <div className="tw-max-h-80 tw-w-full tw-overflow-hidden">
+        <div className="tw-max-h-80 tw-w-full">
           <Image
             className="tw-object-cover"
             src={imagePath}

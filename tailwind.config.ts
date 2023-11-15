@@ -46,7 +46,7 @@ const config: Config = {
         '40': '10rem',
       },
       fontFamily: {
-        robot: ['var(--font-robot)'],
+        roboto: ['var(--font-roboto)'],
         oswald: ['var(--font-oswald)'],
       },
     },

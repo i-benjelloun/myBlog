@@ -9,3 +9,5 @@ export type Post = {
 export type PostItemProps = { post: Post };
 
 export type PostsGridProps = { posts: Post[] };
+
+export type AllPostsProps = { posts: Post[] };
