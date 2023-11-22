@@ -6,7 +6,10 @@
   h1,
   h2,
   h3 {
-    @apply tw-font-roboto tw-font-medium;
+    @apply tw-font-roboto tw-font-bold;
+  }
+  a {
+    @apply tw-no-underline;
   }
 }
 
@@ -56,10 +59,6 @@
 body {
   color: #252525;
   background-color: var(--color-grey-500);
-}
-
-a {
-  text-decoration: none;
 }
 
 button {
