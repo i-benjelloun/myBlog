@@ -1,6 +1,8 @@
 import React from 'react';
 import PostsGrid from './PostsGrid';
-import type { AllPostsProps } from './types';
+import type { Posts } from './types';
+
+type AllPostsProps = { posts: Posts };
 
 function AllPosts({ posts }: AllPostsProps) {
   return (

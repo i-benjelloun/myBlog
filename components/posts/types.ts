@@ -4,10 +4,8 @@ export type Post = {
   date: string;
   excerpt: string;
   image: string;
+  content: string;
+  isFeatured: boolean;
 };
 
-export type PostItemProps = { post: Post };
-
-export type PostsGridProps = { posts: Post[] };
-
-export type AllPostsProps = { posts: Post[] };
+export type Posts = Post[];

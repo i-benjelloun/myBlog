@@ -1,6 +1,8 @@
 import React from 'react';
 import PostItem from './PostItem';
-import type { PostsGridProps } from './types';
+import type { Posts } from './types';
+
+type PostsGridProps = { posts: Posts };
 
 function PostsGrid({ posts }: PostsGridProps) {
   return (

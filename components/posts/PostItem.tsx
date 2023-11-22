@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { type PostItemProps } from './types';
+import type { Post } from './types';
+
+type PostItemProps = { post: Post };
 
 function PostItem({ post }: PostItemProps) {
   const { title, image, excerpt, date, slug } = post;

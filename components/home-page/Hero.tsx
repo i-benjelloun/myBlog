@@ -12,7 +12,7 @@ function Hero() {
           width={300}
         />
       </div>
-      <h1 className="tw-mx-4 tw-text-6xl tw-text-grey-300">Hi, I'm Ibrahim</h1>
+      <h1 className="tw-my-4 tw-text-6xl tw-text-grey-300">Hi, I'm Ibrahim</h1>
       <p className="tw-m-auto tw-w-11/12 tw-max-w-2xl tw-text-2xl tw-text-grey-200">
         I blog about web development - especially frontend frameworks like React
       </p>
