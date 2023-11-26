@@ -5,25 +5,35 @@ import type { Post } from '@/components/posts/types';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-function getPostData(fileName: string): Post {
-  const slug = fileName.replace(/\.md$/, '');
-  const filePath = path.join(postsDirectory, fileName);
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(fileContent);
+export function getPostsFiles() {
+  return fs.readdirSync(postsDirectory);
+}
 
-  const postData = {
-    slug,
-    content,
-    ...data,
-  };
-  // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error, @typescript-eslint/ban-ts-comment
-  // @ts-ignore;
-  return postData;
+export function getPostData(postIdentifier: string): Post | null {
+  const slug = postIdentifier.replace(/\.md$/, ''); // remove file extension if it exists
+  const filePath = path.join(postsDirectory, `${slug}.md`);
+  try {
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const { data, content } = matter(fileContent);
+
+    const postData = {
+      slug,
+      content,
+      ...data,
+    };
+    // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error, @typescript-eslint/ban-ts-comment
+    // @ts-ignore;
+    return postData;
+  } catch (e) {
+    return null;
+  }
 }
 
 export function getAllPosts() {
-  const postFiles = fs.readdirSync(postsDirectory);
-  const allPosts = postFiles.map((postFile) => getPostData(postFile));
+  const postFiles = getPostsFiles();
+  const allPosts = postFiles
+    .map((postFile) => getPostData(postFile))
+    .filter(Boolean) as Post[];
   return allPosts.sort((postA, postB) => (postA.date > postB.date ? -1 : 1));
 }
 
