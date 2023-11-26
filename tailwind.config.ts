@@ -9,6 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      typography: ({ theme }) => ({
+        gray: {
+          css: {
+            '--tw-prose-bullets': theme('colors.grey-900'),
+          },
+        },
+      }),
       colors: {
         'grey-50': 'var(--color-grey-50)',
         'grey-100': 'var(--color-grey-100)',
