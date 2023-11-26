@@ -6,10 +6,13 @@
   h1,
   h2,
   h3 {
-    @apply tw-font-roboto tw-font-bold;
+    @apply tw-font-oswald tw-font-bold;
   }
   a {
     @apply tw-no-underline;
+  }
+  label {
+    @apply tw-font-oswald;
   }
 }
 

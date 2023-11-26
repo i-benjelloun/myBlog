@@ -1,6 +1,4 @@
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
+const config = {
   prefix: 'tw-',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -41,20 +39,23 @@ const config: Config = {
         'error-500': 'var(--color-error-500)',
       },
       spacing: {
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '16': '4rem',
-        '20': '5rem',
-        '40': '10rem',
+        1: '0.25rem',
+        2: '0.5rem',
+        3: '0.75rem',
+        4: '1rem',
+        5: '1.25rem',
+        6: '1.5rem',
+        8: '2rem',
+        16: '4rem',
+        20: '5rem',
+        40: '10rem',
       },
       fontFamily: {
         roboto: ['var(--font-roboto)'],
         oswald: ['var(--font-oswald)'],
+      },
+      fontWeight: {
+        inherit: 'inherit',
       },
     },
   },
