@@ -19,15 +19,8 @@ function PostItem({ post }: PostItemProps) {
   return (
     <li className="tw-overflow-hidden tw-rounded-xl tw-bg-grey-800 tw-text-center tw-text-grey-100 tw-shadow">
       <Link href={linkPath}>
-        <div className="tw-max-h-80 tw-w-full">
-          <Image
-            className="tw-object-cover"
-            src={imagePath}
-            alt={title}
-            width={300}
-            height={200}
-            layout="responsive"
-          />
+        <div className="tw-relative tw-h-80 tw-max-h-80 tw-w-full">
+          <Image src={imagePath} alt={title} layout="fill" objectFit="cover" />
         </div>
         <div className="tw-flex tw-flex-col tw-space-y-4 tw-p-4">
           <h3 className="tw-text-2xl">{title}</h3>
