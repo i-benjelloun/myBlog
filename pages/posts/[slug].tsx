@@ -2,14 +2,23 @@ import PostContent from '@/components/posts/post-detail/PostContent';
 import type { Post } from '@/components/posts/types';
 import { getPostData, getPostsFiles } from '@/lib/posts-util';
 import type { GetStaticPropsContext } from 'next';
-import React from 'react';
+import Head from 'next/head';
+import React, { Fragment } from 'react';
 
 type PostDetailPageProps = {
   post: Post | null;
 };
 
 export default function PostDetailPage({ post }: PostDetailPageProps) {
-  return <PostContent post={post} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>{post?.title}</title>
+        <meta name="description" content={post?.excerpt} />
+      </Head>
+      <PostContent post={post} />;
+    </Fragment>
+  );
 }
 
 export function getStaticProps(
